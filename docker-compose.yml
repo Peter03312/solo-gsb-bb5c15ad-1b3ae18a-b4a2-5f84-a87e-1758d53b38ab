@@ -1,0 +1,8 @@
+services:
+  webvtt-bench:
+    build: .
+    image: webvtt-sync-bench:latest
+    container_name: webvtt-sync-bench
+    ports:
+      - "${WEBVTT_PORT:-8080}:80"
+    restart: unless-stopped
